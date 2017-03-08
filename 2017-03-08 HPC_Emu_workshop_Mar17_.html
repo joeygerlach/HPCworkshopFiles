@@ -1,0 +1,1594 @@
+<html>
+
+<head>
+<meta name=Title content="HPC workshop">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>HPC workshop</title>
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Segoe UI";}
+@font-face
+	{font-family:inherit;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Menlo;
+	panose-1:2 11 6 9 3 8 4 2 2 4;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+h1
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:16.0pt;
+	font-family:Calibri;
+	color:#345A8A;}
+h2
+	{margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:16.0pt;
+	font-family:Calibri;
+	color:#4F81BD;}
+h3
+	{margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:14.0pt;
+	font-family:Calibri;
+	color:#4F81BD;}
+h4
+	{margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Calibri;
+	color:#4F81BD;}
+h5
+	{margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Calibri;
+	color:#4F81BD;
+	font-weight:normal;
+	font-style:italic;}
+h6
+	{margin-top:10.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Calibri;
+	color:#4F81BD;
+	font-weight:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;
+	font-style:italic;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:24.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:18.0pt;
+	font-family:Calibri;
+	color:#345A8A;
+	font-weight:bold;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin-top:9.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:12.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:15.0pt;
+	font-family:Calibri;
+	color:#345A8A;
+	font-weight:bold;}
+p.MsoDate, li.MsoDate, div.MsoDate
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.MsoBlockText, li.MsoBlockText, div.MsoBlockText
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Calibri;}
+a:link, span.MsoHyperlink
+	{color:#4F81BD;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:9.0pt;
+	font-family:"Segoe UI","sans-serif";}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:36.0pt;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.MsoBibliography, li.MsoBibliography, div.MsoBibliography
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.MsoTocHeading, li.MsoTocHeading, div.MsoTocHeading
+	{margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	line-height:107%;
+	font-size:16.0pt;
+	font-family:Calibri;
+	color:#365F91;}
+p.FirstParagraph, li.FirstParagraph, div.FirstParagraph
+	{margin-top:9.0pt;
+	margin-right:0cm;
+	margin-bottom:9.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.Compact, li.Compact, div.Compact
+	{margin-top:1.8pt;
+	margin-right:0cm;
+	margin-bottom:1.8pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.Author, li.Author, div.Author
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	text-align:center;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.Abstract, li.Abstract, div.Abstract
+	{margin-top:15.0pt;
+	margin-right:0cm;
+	margin-bottom:15.0pt;
+	margin-left:0cm;
+	font-size:10.0pt;
+	font-family:Cambria;}
+p.DefinitionTerm, li.DefinitionTerm, div.DefinitionTerm
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Cambria;
+	font-weight:bold;}
+p.Definition, li.Definition, div.Definition
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.TableCaption, li.TableCaption, div.TableCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;
+	font-style:italic;}
+p.ImageCaption, li.ImageCaption, div.ImageCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:6.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;
+	font-style:italic;}
+p.Figure, li.Figure, div.Figure
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+p.FigurewithCaption, li.FigurewithCaption, div.FigurewithCaption
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:Cambria;}
+span.VerbatimChar
+	{font-family:Consolas;}
+p.SourceCode, li.SourceCode, div.SourceCode
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	background:#F8F8F8;
+	word-break:break-all;
+	font-size:12.0pt;
+	font-family:Cambria;}
+span.KeywordTok
+	{font-family:Consolas;
+	color:#204A87;
+	background:transparent;
+	font-weight:bold;}
+span.DataTypeTok
+	{font-family:Consolas;
+	color:#204A87;
+	background:transparent;}
+span.DecValTok
+	{font-family:Consolas;
+	color:#0000CF;
+	background:transparent;}
+span.BaseNTok
+	{font-family:Consolas;
+	color:#0000CF;
+	background:transparent;}
+span.FloatTok
+	{font-family:Consolas;
+	color:#0000CF;
+	background:transparent;}
+span.ConstantTok
+	{font-family:Consolas;
+	color:black;
+	background:transparent;}
+span.CharTok
+	{font-family:Consolas;
+	color:#4E9A06;
+	background:transparent;}
+span.SpecialCharTok
+	{font-family:Consolas;
+	color:black;
+	background:transparent;}
+span.StringTok
+	{font-family:Consolas;
+	color:#4E9A06;
+	background:transparent;}
+span.VerbatimStringTok
+	{font-family:Consolas;
+	color:#4E9A06;
+	background:transparent;}
+span.SpecialStringTok
+	{font-family:Consolas;
+	color:#4E9A06;
+	background:transparent;}
+span.ImportTok
+	{font-family:Consolas;
+	background:transparent;}
+span.CommentTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-style:italic;}
+span.DocumentationTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-weight:bold;
+	font-style:italic;}
+span.AnnotationTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-weight:bold;
+	font-style:italic;}
+span.CommentVarTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-weight:bold;
+	font-style:italic;}
+span.OtherTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;}
+span.FunctionTok
+	{font-family:Consolas;
+	color:black;
+	background:transparent;}
+span.VariableTok
+	{font-family:Consolas;
+	color:black;
+	background:transparent;}
+span.ControlFlowTok
+	{font-family:Consolas;
+	color:#204A87;
+	background:transparent;
+	font-weight:bold;}
+span.OperatorTok
+	{font-family:Consolas;
+	color:#CE5C00;
+	background:transparent;
+	font-weight:bold;}
+span.BuiltInTok
+	{font-family:Consolas;
+	background:transparent;}
+span.ExtensionTok
+	{font-family:Consolas;
+	background:transparent;}
+span.PreprocessorTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-style:italic;}
+span.AttributeTok
+	{font-family:Consolas;
+	color:#C4A000;
+	background:transparent;}
+span.RegionMarkerTok
+	{font-family:Consolas;
+	background:transparent;}
+span.InformationTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-weight:bold;
+	font-style:italic;}
+span.WarningTok
+	{font-family:Consolas;
+	color:#8F5902;
+	background:transparent;
+	font-weight:bold;
+	font-style:italic;}
+span.AlertTok
+	{font-family:Consolas;
+	color:#EF2929;
+	background:transparent;}
+span.ErrorTok
+	{font-family:Consolas;
+	color:#A40000;
+	background:transparent;
+	font-weight:bold;}
+span.NormalTok
+	{font-family:Consolas;
+	background:transparent;}
+span.BalloonTextChar
+	{font-family:"Segoe UI","sans-serif";}
+.MsoChpDefault
+	{font-family:Cambria;}
+.MsoPapDefault
+	{margin-bottom:10.0pt;}
+ /* Page Definitions */
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:42.55pt 36.0pt 36.0pt 62.35pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-GB link="#4F81BD" vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoTitle><span lang=EN-US style='font-size:14.0pt'>HPC workshop</span></p>
+
+<p class=MsoDate><span lang=EN-US style='font-size:10.0pt'>March 2017</span></p>
+
+<h1><a name=useful-links></a><span lang=EN-US style='font-size:12.0pt'>A
+Practical introduction to using High Powered Computing (Supercomputing)</span></h1>
+
+<p class=FirstParagraph style='margin-bottom:6.0pt'><span lang=EN-US
+style='font-size:10.0pt'>This guide will show you how to <b>use</b> the Tizard
+HPC and Emu cloud cluster to run analysis and computation jobs. &nbsp;We will transfer
+files, load software, edit submission scripts and run some example jobs.</span></p>
+
+<p class=MsoBodyText style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm'><span lang=EN-US style='font-size:10.0pt'>The aim of the
+workshop is to make using any available HPC a less intimidating experience by
+walking through the steps in using eRSA’s HPC. The principles also apply to
+other HPC systems, such as University IT HPC or National HPC.</span></p>
+
+<h2><span lang=EN-US style='font-size:12.0pt'>Useful Links</span></h2>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>This handout
+gives a brief guide to get started using the Tizard HPC at eRSA. The skills can
+be applied (with slight variation) to different HPC and supercomputer
+facilities. Here are some links to help you continue to learn.</span></p>
+
+<table class=MsoTable15Plain2 border=1 cellspacing=0 cellpadding=0 width=519
+ style='width:518.7pt;border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=149 style='width:148.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact style='text-align:justify'><b><span lang=EN-US
+  style='font-size:8.0pt'>Today’s workshop file</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US><a href="http://tinyurl.com/ersaHPCemu"
+  target="_blank"><span style='font-size:8.0pt;font-weight:normal'>tinyurl.com/ersaHPCemu</span></a></span></b></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border:none;border-bottom:
+  solid #7F7F7F 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Uni of Adelaide
+  -Phoenix</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border:none;border-bottom:
+  solid #7F7F7F 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="https://www.adelaide.edu.au/phoenix/"><span style='font-size:8.0pt'>https://www.adelaide.edu.au/phoenix/</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Flinders
+  University - Colossus</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="http://flinders.edu.au/science_engineering/csem/news/%20colossusupgraded.cfm"><span
+  style='font-size:8.0pt'>http://flinders.edu.au/science_engineering/csem/news/
+  colossusupgraded.cfm</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>NCI national HPC</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="https://nci.org.au/systems-services/national-facility/peak-system/"><span
+  style='font-size:8.0pt'>https://nci.org.au/systems-services/national-facility/peak-system/</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>eRSA HPC
+  information</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="https://www.ersa.edu.au/service/hpc/"><span style='font-size:8.0pt'>https://www.ersa.edu.au/service/hpc/</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Tizard userguide</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="http://support.ersa.edu.au/hpc/using-supercomputers.html"><span
+  style='font-size:8.0pt'>http://support.ersa.edu.au/hpc/using-supercomputers.html</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Emu userguide</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="http://support.ersa.edu.au/hpc/emu-guide.html"><span style='font-size:
+  8.0pt'>http://support.ersa.edu.au/hpc/emu-guide.html</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Unix Tutorial</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="https://www.codecademy.com/learn/learn-the-command-line"><span
+  style='font-size:8.0pt'>https://www.codecademy.com/learn/learn-the-command-line</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Unix Quick
+  Reference</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;
+  height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="https://files.fosswire.com/2007/08/fwunixref.pdf"><span
+  style='font-size:8.0pt'>https://files.fosswire.com/2007/08/fwunixref.pdf</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>Unix Cheat Sheet</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border-top:solid #7F7F7F 1.0pt;
+  border-left:none;border-bottom:solid #7F7F7F 1.0pt;border-right:none;
+  padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a
+  href="http://www.cs.jhu.edu/~joanne/unixRC.pdf"><span style='font-size:8.0pt'>http://www.cs.jhu.edu/~joanne/unixRC.pdf</span></a></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=149 valign=top style='width:148.85pt;border:none;border-bottom:
+  solid #7F7F7F 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><b><span lang=EN-US style='font-size:8.0pt'>eRSA Helpdesk</span></b></p>
+  </td>
+  <td width=370 valign=top style='width:369.85pt;border:none;border-bottom:
+  solid #7F7F7F 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0pt'>
+  <p class=Compact><span lang=EN-US><a href="https://www.ersa.edu.au/support/"><span
+  style='font-size:8.0pt'>https://www.ersa.edu.au/support/</span></a></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:9.0pt'>For more complete
+information on using the Tizard High Performance Computer, look at the eRSA
+user guides at </span><span lang=EN-US><a
+href="http://support.ersa.edu.au/hpc/user-guide.html"><span style='font-size:
+10.0pt'>http://support.ersa.edu.au/hpc/user-guide.html</span></a></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:10.0pt'>In this
+Quickstart Userguide, the terms inside </span><span class=VerbatimChar><b><span
+lang=EN-US style='font-size:9.0pt;background:yellow'>&lt;arrows&gt;</span></b></span><span
+lang=EN-US style='font-size:10.0pt'> should be replaced with user input.</span></p>
+
+<h2><a name=logging-on-to-the-hpc-machines></a><span lang=EN-US
+style='font-size:12.0pt'>Logging On to the HPC Machines</span></h2>
+
+<h3><a name=windows></a><span lang=EN-US style='font-size:11.0pt'>Windows</span></h3>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Use a program
+called Putty</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Here is the direct link
+to download the putty program &quot;Putty.exe&quot; </span><span lang=EN-US><a
+href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"><span
+style='font-size:10.0pt'>http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html</span></a></span></p>
+
+<p class=Compact style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Open the PuTTY
+application.</span></p>
+
+<p class=Compact style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Enter <b>&quot;tizard1.ersa.edu.au&quot;</b>
+as the hostname.</span></p>
+
+<p class=Compact style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Ensure the
+&quot;Connection type&quot; is <b>&quot;SSH&quot;</b> and set the
+&quot;Port&quot; to <b>&quot;22&quot;</b></span></p>
+
+<p class=Compact style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Click the
+&quot;Open&quot; button, and if you are asked if you trust the connection,
+enter &quot;yes&quot;.</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Enter your eRSA
+username and password at the prompts.</span></p>
+
+<h3><a name=linux-and-mac></a><span lang=EN-US style='font-size:11.0pt'>Linux
+and Mac</span></h3>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Use ssh on
+the command line (in the Terminal app) with this command:</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>ssh &lt;USERNAME&gt;@tizard1.ersa.edu.au</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Note: </span><span
+class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;background:yellow'>&lt;USERNAME&gt;</span></span><span
+lang=EN-US style='font-size:10.0pt'> is your eRSA HPC username<br>
+You will be prompted to enter your eRSA password.</span></p>
+
+<h2><a name=filezilla-sftp-connection-to-tizard></a><span lang=EN-US
+style='font-size:12.0pt'>FileZilla SFTP connection to Tizard</span></h2>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Install FileZilla from </span><span
+lang=EN-US><a href="https://filezilla-project.org/download.php?type=client"><span
+style='font-size:10.0pt'>https://filezilla-project.org/download.php?type=client</span></a></span><span
+lang=EN-US style='font-size:10.0pt'><br>
+(if you have Ubuntu OS use the Ubuntu Software Centre to install)</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Open FileZilla and
+select <b>&quot;File&quot; --&gt; &quot;Site Manager&quot;</b></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Create a &quot;New
+Site&quot; called tizard1.</span></p>
+
+<p class=Compact style='margin-left:60.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>–<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Host :
+tizard1.ersa.edu.au</span></p>
+
+<p class=Compact style='margin-left:60.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>–<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Port : 22</span></p>
+
+<p class=Compact style='margin-left:60.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>–<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Protocol : SFTP</span></p>
+
+<p class=Compact style='margin-left:60.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>–<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Logon Type : Normal</span></p>
+
+<p class=Compact style='margin-left:60.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>–<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Enter your username and
+password and click &quot;Connect&quot;</span></p>
+
+<h2><a name=setting-up-a-job-submission></a><span lang=EN-US style='font-size:
+12.0pt'>Setting up a job submission</span></h2>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>You are now
+logged on to the tizard submission node. You can run small jobs here directly,
+but for most jobs you will modify a PBS submission script to the Torque
+queueing system.</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>See the submission
+script templates in a hidden folder called &quot;.templates&quot; located in
+your home directory.</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls -a</span></span><span lang=EN-US style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls .templates</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>less .templates/tizard.sub</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Create a directory to
+work from in &quot;/scratch&quot;</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>mkdir /scratch/$USER</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Copy the submission
+script to the directory</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>cp .templates/tizard.sub /scratch/$USER/</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Navigate to the
+directory</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>cd /scratch/$USER/</span></span></p>
+
+<h3><a name=edit-the-submission-script></a><span lang=EN-US style='font-size:
+11.0pt'>Edit the submission script</span></h3>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>We will be
+running an example job using the package &quot;Stacks&quot;</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Use the module commands
+to explore the availablity of the package, and the dependencies that must be
+loaded prior to loading the package.</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>module avail</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>module avail stacks</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>module whatis stacks</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Copy the package names
+listed under &quot;Required Modules&quot;</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Edit the submission
+script with </span><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>nano tizard.sub</span></span><span lang=EN-US
+style='font-size:10.0pt'> (or use the file edit option in FileZilla)</span></p>
+
+<span lang=EN-US style='font-size:10.0pt;font-family:Cambria'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><a name=terms-to-replace-when-editing-a-submissi></a><b><span
+lang=EN-US style='font-size:10.0pt;font-family:Calibri;color:#4F81BD'>&nbsp;</span></b></p>
+
+<h4><span lang=EN-US style='font-size:10.0pt'>Terms to replace when editing a
+submission script</span></h4>
+
+<p class=FirstParagraph><i><span lang=EN-US style='font-size:10.0pt'>Replace
+the following terms in the submission script (shown in</span></i><span
+lang=EN-US style='font-size:10.0pt'> <b><i>bold</i></b> <i>).</i></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr>
+  <td valign=bottom style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>Template Script</span></p>
+  </td>
+  <td valign=bottom style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><b><i><span lang=EN-US style='font-size:10.0pt'>MyJobName</span></i></b><span
+  lang=EN-US style='font-size:10.0pt'> </span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>give your job a
+  descriptive name</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><b><i><span lang=EN-US style='font-size:10.0pt'>Your-email-Address</span></i></b><span
+  lang=EN-US style='font-size:10.0pt'> </span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>your email address
+  is used to alert you of job completion</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>#PBS -l
+  nodes=1:ppn=<b><i>Y</i></b></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>enter the number
+  of processors required</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>#PBS -l mem=<b><i>X</i></b>gb,vmem=<b><i>X</i></b>gb</span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>enter the amount
+  of memory required</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>#PBS -l walltime=<b><i>HH:MM:SS</i></b></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>enter the maximum
+  time the process will take.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>module load <b><i>application_module</i></b></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>load any required
+  modules first (see the output from the </span><span class=VerbatimChar><span
+  lang=EN-US style='font-size:9.0pt;background:yellow'>module whatis</span></span><span
+  lang=EN-US style='font-size:10.0pt'> command above). Then on a new line, load
+  the program you will use.</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><b><i><span lang=EN-US style='font-size:10.0pt'>MyProgram+Arguments</span></i></b></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>Enter the command
+  to start the program, as you would enter it on the command line.</span></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name=running-an-example-job-submission></a><span lang=EN-US
+style='font-size:12.0pt'>Running an Example Job Submission</span></h2>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>We will be
+running an example job using an example data set that we can copy from a shared
+folder.</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Copy the dataset and
+the submission script to your scratch folder. Explore the contents of the
+example folder.</span></p>
+
+<p class=SourceCode style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;
+margin-left:24.1pt;margin-bottom:.0001pt;text-indent:-24.1pt'><span
+class=VerbatimChar><span lang=EN-US style='font-size:10.0pt;font-family:Cambria'>&nbsp;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>cp -r
+/opt/shared/training/HPCworkshop ./workshop</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>cd workshop</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls &nbsp;</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls data</span></span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls results</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>nano tizard_exp1.sub</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Edit the submission
+script using FileZilla or </span><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>nano</span></span><span lang=EN-US
+style='font-size:10.0pt'>.</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Submit the job to the
+queueing system, then check the status of the job.</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>qsub tizard_exp1.sub</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>qstat</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US style='font-size:10.0pt'>Check the log file and
+the results folder:</span></p>
+
+<p class=SourceCode style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>&nbsp;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls -l</span></span><span lang=EN-US style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>less Experiment1.o&lt;XXXXX&gt;</span></span><span
+lang=EN-US style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls results/</span></span><a name=emu---cluster-in-the-cloud></a></p>
+
+<span lang=EN-US style='font-size:12.0pt;font-family:Cambria'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-family:Calibri;color:#345A8A'>&nbsp;</span></b></p>
+
+<p class=MsoTitle><span lang=EN-US>Emu - Cluster in the Cloud</span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Using Emu is
+almost identical to using Tizard. The same submission script can be modified to
+use in Emu. The full user guide is found on the eRSA support page </span><span
+lang=EN-US><a href="http://support.ersa.edu.au/hpc/emu-guide.html"><span
+style='font-size:10.0pt'>http://support.ersa.edu.au/hpc/emu-guide.html</span></a></span></p>
+
+<h2><a name=logging-on-to-emu></a><span lang=EN-US style='font-size:12.0pt'>Logging
+on to Emu</span></h2>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>This is the
+same as logging on to tizard, except: host : emu.ersa.edu.au or </span><span
+class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;background:yellow'>ssh
+&lt;USERNAME&gt;@emu.ersa.edu.au</span></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:10.0pt'>Notice the home
+folder at log-in is the same as the tizard1 home folder.<br>
+Look at the Emu submission script template:</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>ls -la</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls .templates</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>less .templates/emu.sub</span></span></p>
+
+<p class=MsoNormal><a name=running-a-job-on-the-emu-cluster></a><span
+lang=EN-US>Running a job on the Emu Cluster</span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Navigate to
+the Emu '/scratch' directory to submit a job:</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>mkdir /scratch/$USER</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>cp .templates/emu.sub /scratch/$USER/</span></span><span
+lang=EN-US style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>cd /scratch/$USER</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Copy the
+example data folder to this location:</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>cp -r /opt/shared/training/HPCworkshop ./workshop</span></span><span
+lang=EN-US style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>cd workshop</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls -lh</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Edit the
+submission script for use with Emu</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>nano tizard_exp1.sub</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Make the
+following changes:</span></p>
+
+<p class=MsoBodyText style='margin-top:0cm'><span class=VerbatimChar><span
+lang=EN-US style='font-size:9.0pt'>#PBS -q tizard&nbsp;&nbsp;&nbsp;
+--&gt;&nbsp;&nbsp;&nbsp;&nbsp; #PBS -q emu</span></span></p>
+
+<p class=MsoBodyText style='margin-top:0cm'><span class=VerbatimChar><span
+lang=EN-US style='font-size:9.0pt'>#PBS -l mem=.....etc&nbsp;&nbsp;&nbsp;&nbsp;
+--&gt;&nbsp;&nbsp; ### PBS -l mem=.....</span></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:10.0pt'>Use control 'o'
+to save the modified file to the name <b>&quot;emu_exp1.sub&quot;</b>, then
+control ‘x’ to save</span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:10.0pt'>Run the job:</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>qsub emu_exp1.sub</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>qstat</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Check the log
+file and the results folder:</span></p>
+
+<p class=SourceCode><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>ls -l</span></span><span lang=EN-US style='font-size:
+10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>less exp1.o&lt;XXXXX&gt;</span></span><span lang=EN-US
+style='font-size:10.0pt'><br>
+</span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>ls results/</span></span></p>
+
+<p class=MsoNormal><a name=transferring-data></a><a name=filezilla-and-winscp></a><span
+lang=EN-US>&nbsp;</span></p>
+
+<span style='font-size:19.5pt;font-family:"inherit","serif";color:#555555'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-size:19.5pt;font-family:"inherit","serif";
+color:#555555'>&nbsp;</span></p>
+
+<p class=MsoTitle>Using PBS to run a MPI program</p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:"Times New Roman"'>The
+following are some MPI Examples for you try.</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:"Times New Roman"'>Starting
+     in your home or scratch directory copy the whole tree to your current
+     directory:</span></li>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:18.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>cp -ax /opt/shared/training/MPI-EXAMPLES . </span></p>
+
+</div>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:"Times New Roman"'>Enter
+     the directory and read the HOW-2:</span></li>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:18.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>cd MPI-EXAMPLES</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>less HOW-2-compile-MPI-Programs</span></p>
+
+</div>
+
+<ul style='margin-top:0cm' type=disc>
+ <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:"Times New Roman"'>This
+     explains you need to do the following:</span></li>
+ <ol style='margin-top:0cm' start=1 type=1>
+  <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+      "Times New Roman"'>Load the openmpi modules</span></li>
+ </ol>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:54.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>module load intel/11.10.319&nbsp; openmpi/intel64/1.6.2</span></p>
+
+</div>
+
+<ul style='margin-top:0cm' type=disc>
+ <ol style='margin-top:0cm' start=2 type=1>
+  <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+      "Times New Roman"'>Change into the directory and compile the program:</span></li>
+  <ul style='margin-top:0cm' type=square>
+   <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+       "Times New Roman"'>C++ Program ‘Matrix’</span></li>
+  </ul>
+ </ol>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:90.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>cd Matrix&nbsp;&nbsp;&nbsp; </span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>mpicc -o matrix matrix.cc</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;</span></p>
+
+</div>
+
+<ul style='margin-top:0cm' type=disc>
+ <ol style='margin-top:0cm' start=3 type=1>
+  <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+      "Times New Roman"'>Make a QSUB submisson script in the directory:</span></li>
+ </ol>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:54.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;cp ~/.templates/tizard.sub matrix.sub&nbsp; </span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;</span></p>
+
+</div>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman"'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span style='font-family:"Times New Roman"'>&nbsp;</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <ol style='margin-top:0cm' start=4 type=1>
+  <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+      "Times New Roman"'>Edit the qsub file as detailed&nbsp;</span><span
+      lang=EN-US><a
+      href="http://support.ersa.edu.au/hpc/torque-pbs-queuing-system-commands.html#configure-your-qsub-script"><span
+      lang=EN-GB style='font-family:"Times New Roman";color:#E03C0E'>above</span></a></span><span
+      style='font-family:"Times New Roman"'>:</span></li>
+ </ol>
+</ul>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;
+margin-left:72.0pt'><span style='font-family:"Times New Roman"'>*For each qsub
+script, change the resources to four nodes with one cpu on each, 2GB of mem and
+vmem and a walltime of 10 minutes:</span></p>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:72.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;&nbsp; #PBS -l nodes=4:ppn=1</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;&nbsp; #PBS -l mem=2gb,vmem=2gb</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;&nbsp; #PBS -l walltime=00:10:00</span></p>
+
+</div>
+
+<ul style='margin-top:0cm' type=disc>
+ <ol style='margin-top:0cm' start=4 type=1>
+  <ul style='margin-top:0cm' type=square>
+   <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+       "Times New Roman"'>Add the following code to the line after :&nbsp;</span><span
+       style='font-size:9.5pt;font-family:Menlo;color:#C7254E;background:transparent'>echo
+       Time is `date`</span></li>
+  </ul>
+ </ol>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:90.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>echo Time is `date`</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>echo Using Nodes from PBS_NODEFILE:</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>cat $PBS_NODEFILE</span></p>
+
+</div>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:0cm;margin-bottom:7.5pt;
+margin-left:108.0pt'><span style='font-family:"Times New Roman"'>(We add this
+so we can see what NODES PBS gave us to run our job.)</span></p>
+
+<ul style='margin-top:0cm' type=disc>
+ <ol style='margin-top:0cm' start=4 type=1>
+  <ul style='margin-top:0cm' type=square>
+   <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+       "Times New Roman"'>For matrix.sub</span></li>
+   <ul style='margin-top:0cm' type=square>
+    <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+        "Times New Roman"'>change the ‘JobName’ and the ‘Executable Line’</span></li>
+   </ul>
+  </ul>
+ </ol>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:126.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>### Job name</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>#PBS -N Matrix</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'># Run the executable</span></p>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>mpirun -np 4 ./matrix_program</span></p>
+
+</div>
+
+<ul style='margin-top:0cm' type=disc>
+ <ol style='margin-top:0cm' start=5 type=1>
+  <li class=MsoNormal style='margin-bottom:7.5pt'><span style='font-family:
+      "Times New Roman"'>Submit the the jobs to the queuing system:</span></li>
+ </ol>
+</ul>
+
+<div style='border:solid #CCCCCC 1.0pt;padding:7.0pt 7.0pt 7.0pt 7.0pt;
+background:whitesmoke;margin-left:108.0pt;margin-right:0cm'>
+
+<p class=MsoNormal style='margin-bottom:7.5pt;background:whitesmoke;word-break:
+break-all;border:none;padding:0cm'><span style='font-size:10.0pt;font-family:
+Menlo;color:#333333'>qsub matrix.sub</span></p>
+
+</div>
+
+<p class=MsoListParagraph style='margin-left:72.0pt;text-indent:-18.0pt;
+background:white'><span style='font-size:10.5pt;font-family:Helvetica;
+color:#333333'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:10.5pt;font-family:Helvetica;color:#333333'>Use
+the ‘less’ command to look at the log file. See that 4 nodes were used to run
+the job.</span></p>
+
+<span lang=EN-US style='font-size:12.0pt;font-family:Cambria'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-family:Calibri;color:#4F81BD'>&nbsp;</span></b></p>
+
+<h1><span lang=EN-US style='font-size:12.0pt'>Transferring data</span></h1>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Make a zip
+file of your results for easier transfers</span></p>
+
+<p class=MsoBodyText><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>cp exp* tizard* results/</span></span><span
+lang=EN-US style='font-size:10.0pt'> # copy logs and submission scripts for
+later reference</span></p>
+
+<p class=MsoBodyText><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>zip exp1_results.zip results</span></span><span
+lang=EN-US style='font-size:10.0pt'> or </span><span class=VerbatimChar><span
+lang=EN-US style='font-size:9.0pt;background:yellow'>tar -cvf exp1_results.tar
+results</span></span></p>
+
+<p class=MsoBodyText><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>gzip exp1_results.tar</span></span></p>
+
+<h2><span lang=EN-US style='font-size:12.0pt'>&nbsp;</span></h2>
+
+<h2><span lang=EN-US style='font-size:12.0pt'>FileZilla and WinSCP</span></h2>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>These sftp
+clients are an easy way of moving files between a remote computer (e.g. the
+Tizard or Emu &quot;</span><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>/scratch</span></span><span
+lang=EN-US style='font-size:10.0pt'>&quot; folders) and your desktop computer.
+Just point and click to find the required folders, then drag and drop the files
+between the two locations.</span></p>
+
+<h2><a name=sftp-via-the-command-line></a><span lang=EN-US style='font-size:
+12.0pt'>SFTP via the Command Line</span></h2>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>Secure file
+transfer using shell commands allows you to transfer data between two remote
+data storage locations (e.g. between your Emu &quot;</span><span
+class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;background:yellow'>/scratch</span></span><span
+lang=EN-US style='font-size:10.0pt'>&quot; folder and your eRSA &quot;</span><span
+class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;background:yellow'>/data</span></span><span
+lang=EN-US style='font-size:10.0pt'>&quot; long-term data storage).</span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:10.0pt'>Enter the 'sftp'
+command while logged on to 'emu.ersa.edu.au', and you will have access to the
+remote storage server.</span></p>
+
+<p class=MsoBodyText><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>sftp username@sftp.ersa.edu.au</span></span><span
+lang=EN-US style='font-size:10.0pt'> - you will be prompted for a password.</span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='font-size:10.0pt'>You are now
+accessing the remote data storage server, and you can navigate the files on the
+server as per usual with commands like </span><span class=VerbatimChar><span
+lang=EN-US style='font-size:9.0pt;background:yellow'>cd</span></span><span
+lang=EN-US style='font-size:10.0pt'> and </span><span class=VerbatimChar><span
+lang=EN-US style='font-size:9.0pt;background:yellow'>ls</span></span><span
+lang=EN-US style='font-size:10.0pt'>.<br>
+The commands </span><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>get</span></span><span lang=EN-US style='font-size:
+10.0pt'> and </span><span class=VerbatimChar><span lang=EN-US style='font-size:
+9.0pt;background:yellow'>put</span></span><span lang=EN-US style='font-size:
+10.0pt'> will transfer data between the machines:</span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>get &lt;remote_server_file.txt&gt; &lt;localEMU_destination/&gt;</span></span></p>
+
+<p class=MsoNormal style='margin-left:24.0pt;text-indent:-24.0pt'><span
+lang=EN-US style='font-size:10.0pt'>•<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span class=VerbatimChar><span lang=EN-US style='font-size:9.0pt;
+background:yellow'>put &lt;localEMU_file.zip&gt;
+&lt;remote_server_destination/&gt;</span></span></p>
+
+<p class=FirstParagraph><span lang=EN-US style='font-size:10.0pt'>to close the
+sftp connection, type </span><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>exit</span></span><span lang=EN-US
+style='font-size:10.0pt'>.</span></p>
+
+<h2><a name=remove-old-data-files-from-the-server></a><span lang=EN-US
+style='font-size:12.0pt'>Remove old data files from the server</span></h2>
+
+<p class=FirstParagraph><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>cd /scratch/$USER</span></span><span
+lang=EN-US style='font-size:10.0pt'> </span><span class=VerbatimChar><span
+lang=EN-US style='font-size:9.0pt;background:yellow'>rm -r workshop</span></span></p>
+
+<p class=MsoNormal><a name=quick-reference-for-commands></a><b><span
+lang=EN-US style='font-family:Calibri;color:#4F81BD'>&nbsp;</span></b></p>
+
+<span lang=EN-US style='font-size:12.0pt;font-family:Cambria'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><b><span lang=EN-US style='font-family:Calibri;color:#4F81BD'>&nbsp;</span></b></p>
+
+<h2><span lang=EN-US style='font-size:12.0pt'>Quick reference for commands</span></h2>
+
+<p class=FirstParagraph><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>ssh &lt;USERNAME&gt;@tizard1.ersa.edu.au</span></span></p>
+
+<p class=FirstParagraph><span class=VerbatimChar><span lang=EN-US
+style='font-size:9.0pt;background:yellow'>ssh &lt;USERNAME&gt;@emu.ersa.edu.au</span></span></p>
+
+<p class=MsoBodyText><span lang=EN-US style='background:yellow'>&nbsp;</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;border-collapse:collapse'>
+ <tr>
+  <td valign=bottom style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>Command</span></p>
+  </td>
+  <td valign=bottom style='border:none;border-bottom:solid windowtext 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>Action</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module --help</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>help page for the
+  'module' commands</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module avail</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>list all available
+  packages in the repository</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module avail &lt;search term&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>list package names
+  containing the search term</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module list</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>list the packages
+  that are already loaded on the VM</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module show &lt;name&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>show info on the
+  package, and lists the required modules to pre-load</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module whatis &lt;name&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>other information
+  about the package</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module load &lt;name&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>load the package
+  onto the VM</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>module unload &lt;name&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>remove the package
+  'cache' from the VM</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>cd /scratch/$USER</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>navigate to the
+  folder from which jobs are run</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>nano &lt;file&gt;.sub</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>edit a submission
+  script</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>qsub &lt;file&gt;.sub</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>send a submission
+  script to the queueing system</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>qstat</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>check the status
+  of submitted jobs</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span class=VerbatimChar><span lang=EN-US style='font-size:
+  9.0pt;background:yellow'>qdel &lt;jobID&gt;</span></span></p>
+  </td>
+  <td valign=top style='padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=Compact><span lang=EN-US style='font-size:10.0pt'>delete a job from
+  the queue (check jobid from </span><span class=VerbatimChar><span lang=EN-US
+  style='font-size:9.0pt;background:yellow'>qstat</span></span><span
+  lang=EN-US style='font-size:10.0pt'>)</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US style='font-size:10.0pt'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
